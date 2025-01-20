@@ -28,7 +28,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "src/lib/SessionWrapper.js", "src/lib/authOptions.js"  ],
   "exclude": [
     "node_modules"
   ]
