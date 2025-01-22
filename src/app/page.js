@@ -1,16 +1,19 @@
 "use client";
 
-import { signIn, useSession } from "next-auth/react";
+import { signIn, signOut, useSession } from "next-auth/react";
 
 export default function Home() {
-
-  const {data:session} = useSession()
-  if(session) console.log(session)
+  const { data: session } = useSession();
+  if (session) console.log(session);
 
   return (
     <>
       <div className="max-w h-screen max-auto flex justify-center items-center flex-col gap-2">
-        <h1 className="text-8xl uppercase font-black text-center mb-4">NEXTAUTH</h1>
+        <h1 className="text-8xl uppercase font-black text-center mb-4">
+          NEXTAUTH
+        </h1>
+        {session && <button onClick={() => signOut()}>Sign out</button>}
+        {session && <p>Bienvenue {session?.user?.name}</p>}
         <div className="flex items-center gap-2">
           <button
             onClick={() => signIn("google")}

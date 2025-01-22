@@ -14,8 +14,3 @@ export const authOptions = {
     }),
   ]
 }
-
-console.log("GITHUB_ID:", process.env.GITHUB_ID);
-console.log("GITHUB_SECRET:", process.env.GITHUB_SECRET);
-console.log("GOOGLE_CLIENT_ID:", process.env.GOOGLE_CLIENT_ID);
-console.log("GOOGLE_SECRET_ID:", process.env.GOOGLE_SECRET_ID);
